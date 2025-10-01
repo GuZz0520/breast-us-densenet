@@ -9,7 +9,7 @@ Reproducible PyTorch pipeline for **3-class breast ultrasound** (normal / benign
 
 > **Paper:** _add link here_  
 > **Repo:** https://github.com/GuZz0520/breast-us-densenet  
-> **Model weights (Release):** _add v0.1.0 release link here_
+> **Model weights (Release):(https://github.com/GuZz0520/breast-us-densenet/releases/tag/v0.1.0)
 
 ---
 
