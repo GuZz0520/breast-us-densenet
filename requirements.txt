@@ -1,0 +1,11 @@
+albumentations>=1.4.0
+opencv-python
+numpy
+pandas
+scikit-learn
+PyYAML
+tqdm
+matplotlib
+timm>=1.0.7
+gradio
+python-multipart

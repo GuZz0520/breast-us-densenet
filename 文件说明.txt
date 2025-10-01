@@ -1,0 +1,23 @@
+breast-us-densenet/
+├─ configs/
+│   └─ baseline.yaml
+├─ outputs/
+│   ├─ best.pt                 # 训练好的最优权重
+│   └─ config_used.yaml        # 训练时实际配置
+├─ data/
+│   ├─ train.csv               
+│   ├─ val.csv
+│   └─ test.csv                
+├─ scripts/
+│   ├─ app_gradio.py           # 网页演示
+│   ├─ make_csv_from_folders.py# 从文件夹生成CSV
+│   └─ export_onnx.py          # 导出 ONNX
+├─ src/                        # 代码（data/models/losses/engine/utils）
+│   ├─ data/ …
+│   ├─ models/ …
+│   ├─ losses/ …
+│   ├─ engine/ …
+│   └─ utils/ …
+├─ requirements-no-torch.txt   # 依赖（不含 torch）
+├─ README_RUN_TEST.md          # 测试说明
+

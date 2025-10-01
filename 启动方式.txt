@@ -1,0 +1,1 @@
+python -u scripts\app_gradio.py

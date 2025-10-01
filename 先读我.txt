@@ -1,0 +1,32 @@
+ 1) 建环境（Python 3.13）
+conda create -n BreastUS python=3.13 -y
+conda activate BreastUS
+python -m pip install --upgrade pip
+python -m pip install -r requirements-no-torch.txt
+
+安装 PyTorch（CPU 版；如有 NVIDIA CUDA，自行改成官网指令）
+python -m pip install torch --index-url https://download.pytorch.org/whl/cpu
+
+2) 准备数据
+从文件夹生成 CSV（假设 test 图片在 data\images\test\正常/良性/恶性 三个子文件夹）：
+python scripts\make_csv_from_folders.py --root data\images\test --outdir data --test_only
+# 会生成 data\test.csv，label 列来自子文件夹名
+
+3) 运行评测（只评测测试集）
+python -m src.engine.evaluate --cfg configs\baseline.yaml --weights outputs\best.pt --split test
+
+输出说明：
+ Metrics: {'acc': ..., 'macro_f1': ..., 'macro_auc': ...}
+ Confusion Matrix:
+[... ... ...],
+ [... ... ...],
+[... ... ...]]
+同时会在控制台显示各类 Precision/Recall/F1（若你开启），并可扩展保存到 outputs/eval_*.json
+
+结果
+把控制台的 Metrics 与 Confusion Matrix 复制：
+- Acc：
+- Macro-F1：
+- Macro-AUC：
+- 混淆矩阵（3x3）：
+并附：torch 版本、是否 GPU、图片总量
