@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "Breast Ultrasound Classification with DenseNet121 and Built-in Grad-CAM"
+authors:
+  - family-names: "Gu"
+    given-names: "Zz0520"
+  - name: "Contributors"
+repository-code: "https://github.com/GuZz0520/breast-us-densenet"
+version: "v0.1.0"
+date-released: "2025-10-01"
